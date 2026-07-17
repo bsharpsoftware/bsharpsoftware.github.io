@@ -1,13 +1,9 @@
-html {
-	scrollbar-width: none;
-}
-
 * {
 	margin: 0px;
 	padding: 0px;
 }
 
-#rootFontSizeSpan {
+#rootFontSizeElement {
 	width: 1rem;
 	display: none;
 }
