@@ -21,7 +21,7 @@ function bsharp_site_domElementCreate() {
         rootFontSizeElement: bsharp_site_domElement_rootFontSizeElementCreate(),
         menuDesktopElement: bsharp_site_domElement_menuDesktopElementCreate(),
         menuMobileContainer: bsharp_site_domElement_menuMobileContainerCreate(),
-        pageElement: bsharp_site_domElement_pageElementCreate();
+        pageElement: bsharp_site_domElement_pageElementCreate()
     };
 }
 
@@ -33,13 +33,15 @@ function bsharp_site_domElement_rootFontSizeElementCreate() {
 }
 
 function bsharp_site_domElement_rootFontSizeElement_elementGet() {
-    site.domElement.rootFontSizeElement.element = document.getElementById("rootFontSizeElement");
+    var temp = document.getElementById("rootFontSizeElement");
+    return temp;
 }
 
 function bsharp_site_domElement_rootFontSizeElement_observerCreate() {
-    site.domElement.rootFontSizeElement.observer = new ResizeObserver(() => {
+    var temp = new ResizeObserver(() => {
         adjust();
     });
+    return temp;
 }
 
 function bsharp_site_domElement_menuDesktopElementCreate() {
@@ -52,14 +54,15 @@ function bsharp_site_domElement_menuDesktopElementCreate() {
 }
 
 function bsharp_site_domElement_menuDesktopElement_elementCreate() {
-    site.domElement.menuDesktopElement.element = document.createElement("div");
-    site.domElement.menuDesktopElement.element.style.display = "flex";
-    site.domElement.menuDesktopElement.element.style.flexWrap = "wrap";
-    site.domElement.menuDesktopElement.element.style.alignItems = "stretch";
-    site.domElement.menuDesktopElement.element.style.backgroundColor = "rgba(0, 0, 0, 1.0)";
-    site.domElement.menuDesktopElement.element.style.width = "100%";
-    site.domElement.menuDesktopElement.element.style.height = "auto";
-    site.domElement.menuDesktopElement.element.id = "site_domElement_menuDesktopElement_element";
+    var temp = document.createElement("div");
+    temp.style.display = "flex";
+    temp.style.flexWrap = "wrap";
+    temp.style.alignItems = "stretch";
+    temp.style.backgroundColor = "rgba(0, 0, 0, 1.0)";
+    temp.style.width = "100%";
+    temp.style.height = "auto";
+    temp.id = "site_domElement_menuDesktopElement_element";
+    return temp;
 }
 
 function bsharp_site_domElement_menuDesktopElement_mainElementCreate() {
@@ -69,15 +72,16 @@ function bsharp_site_domElement_menuDesktopElement_mainElementCreate() {
 }
 
 function bsharp_site_domElement_menuDesktopElement_mainElement_elementCreate() {
-    site.domElement.menuDesktopElement.mainElement.element = document.createElement("img");
-    site.domElement.menuDesktopElement.mainElement.element.style.display = "flex";
-    site.domElement.menuDesktopElement.mainElement.element.style.justifyContent = "center";
-    site.domElement.menuDesktopElement.mainElement.element.style.alignItems = "center";
-    site.domElement.menuDesktopElement.mainElement.element.style.outline = "3px solid rgba(255, 255, 255, 0.0)";
-    site.domElement.menuDesktopElement.mainElement.element.style.outlineOffset("-3px");
-    site.domElement.menuDesktopElement.mainElement.element.src = "https://bsharpsoftware.github.io/image/logo.svg";
-    site.domElement.menuDesktopElement.mainElement.element.alt = "main";
-    site.domElement.menuDesktopElement.mainElement.element.id = "site_domElement_menuDesktopElement_mainElement_element";
+    var temp = document.createElement("img");
+    temp.style.display = "flex";
+    temp.style.justifyContent = "center";
+    temp.style.alignItems = "center";
+    temp.style.outline = "3px solid rgba(255, 255, 255, 0.0)";
+    temp.style.outlineOffset = "-3px";
+    temp.src = "https://bsharpsoftware.github.io/image/logo.svg";
+    temp.alt = "main";
+    temp.id = "site_domElement_menuDesktopElement_mainElement_element";
+    return temp;
 }
 
 function bsharp_site_domElement_menuDesktopElement_messagesElementCreate() {
@@ -87,16 +91,17 @@ function bsharp_site_domElement_menuDesktopElement_messagesElementCreate() {
 }
 
 function bsharp_site_domElement_menuDesktopElement_messagesElement_elementCreate() {
-    site.domElement.menuDesktopElement.messagesElement.element = document.createElement("div");
-    site.domElement.menuDesktopElement.messagesElement.element.style.display = "flex";
-    site.domElement.menuDesktopElement.messagesElement.element.style.justifyContent = "center";
-    site.domElement.menuDesktopElement.messagesElement.element.style.alignItems = "center";
-    site.domElement.menuDesktopElement.messagesElement.element.style.outline = "3px solid rgba(255, 255, 255, 0.0)";
-    site.domElement.menuDesktopElement.messagesElement.element.style.outlineOffset("-3px");
-    site.domElement.menuDesktopElement.messagesElement.element.innerHTML = "Messages";
-    site.domElement.menuDesktopElement.messagesElement.element.style.color = rgba(255, 255, 255, 1.0);
-    site.domElement.menuDesktopElement.messagesElement.element.style.overflowWrap = "break-word";
-    site.domElement.menuDesktopElement.messagesElement.element.id = "site_domElement_menuDesktopElement_messagesElement_element";
+    var temp = document.createElement("div");
+    temp.style.display = "flex";
+    temp.style.justifyContent = "center";
+    temp.style.alignItems = "center";
+    temp.style.outline = "3px solid rgba(255, 255, 255, 0.0)";
+    temp.style.outlineOffset = "-3px";
+    temp.innerHTML = "Messages";
+    temp.style.color = "rgba(255, 255, 255, 1.0)";
+    temp.style.overflowWrap = "break-word";
+    temp.id = "site_domElement_menuDesktopElement_messagesElement_element";
+    return temp;
 }
 
 function bsharp_site_domElement_menuDesktopElement_aboutElementCreate() {
@@ -106,16 +111,17 @@ function bsharp_site_domElement_menuDesktopElement_aboutElementCreate() {
 }
 
 function bsharp_site_domElement_menuDesktopElement_aboutElement_elementCreate() {
-    site.domElement.menuDesktopElement.aboutElement.element = document.createElement("div");
-    site.domElement.menuDesktopElement.aboutElement.element.style.display = "flex";
-    site.domElement.menuDesktopElement.aboutElement.element.style.justifyContent = "center";
-    site.domElement.menuDesktopElement.aboutElement.element.style.alignItems = "center";
-    site.domElement.menuDesktopElement.aboutElement.element.style.outline = "3px solid rgba(255, 255, 255, 0.0)";
-    site.domElement.menuDesktopElement.aboutElement.element.style.outlineOffset("-3px");
-    site.domElement.menuDesktopElement.aboutElement.element.innerHTML = "About";
-    site.domElement.menuDesktopElement.aboutElement.element.style.color = rgba(255, 255, 255, 1.0);
-    site.domElement.menuDesktopElement.aboutElement.element.style.overflowWrap = "break-word";
-    site.domElement.menuDesktopElement.aboutElement.element.id = "site_domElement_menuDesktopElement_aboutElement_element";
+    var temp = document.createElement("div");
+    temp.style.display = "flex";
+    temp.style.justifyContent = "center";
+    temp.style.alignItems = "center";
+    temp.style.outline = "3px solid rgba(255, 255, 255, 0.0)";
+    temp.style.outlineOffset = "-3px";
+    temp.innerHTML = "About";
+    temp.style.color = "rgba(255, 255, 255, 1.0)";
+    temp.style.overflowWrap = "break-word";
+    temp.id = "site_domElement_menuDesktopElement_aboutElement_element";
+    return temp;
 }
 
 function bsharp_site_domElement_menuMobileContainerCreate() {
@@ -136,34 +142,37 @@ function bsharp_site_domElement_menuMobileContainer_hamburgerElementCreate() {
 }
 
 function bsharp_site_domElement_menuMobileContainer_hamburgerElement_elementCreate() {
-    site.domElement.menuMobileContainer.hamburgerElement.element = document.createElement("div");
-    site.domElement.menuMobileContainer.hamburgerElement.element.style.display = "flex";
-    site.domElement.menuMobileContainer.hamburgerElement.element.style.flexWrap = "wrap";
-    site.domElement.menuMobileContainer.hamburgerElement.element.style.alignItems = "stretch";
-    site.domElement.menuMobileContainer.hamburgerElement.element.style.background = "#000000";
-    site.domElement.menuMobileContainer.hamburgerElement.element.style.width = "100%";
-    site.domElement.menuMobileContainer.hamburgerElement.element.style.height = "auto";
-    site.domElement.menuMobileContainer.hamburgerElement.element.id = "site_domElement_menuMobileContainer_hamburgerElement_element";
+    var temp = document.createElement("div");
+    temp.style.display = "flex";
+    temp.style.flexWrap = "wrap";
+    temp.style.alignItems = "stretch";
+    temp.style.background = "#000000";
+    temp.style.width = "100%";
+    temp.style.height = "auto";
+    temp.id = "site_domElement_menuMobileContainer_hamburgerElement_element";
+    return temp;
 }
 
 function bsharp_site_domElement_menuMobileContainer_hamburgerElement_hamburgerImageSelectedTrueElementCreate() {
-    site.domElement.menuMobileContainer.hamburgerElement.hamburgerImageSelectedTrueElement = document.createElement("img");
-    site.domElement.menuMobileContainer.hamburgerElement.hamburgerImageSelectedTrueElement.style.display = "flex";
-    site.domElement.menuMobileContainer.hamburgerElement.hamburgerImageSelectedTrueElement.style.justifyContent = "center";
-    site.domElement.menuMobileContainer.hamburgerElement.hamburgerImageSelectedTrueElement.style.alignItems = "center";
-    site.domElement.menuMobileContainer.hamburgerElement.hamburgerImageSelectedTrueElement.src = "https://bsharpsoftware.github.io/image/hamburgerMenu_1.svg";
-    site.domElement.menuMobileContainer.hamburgerElement.hamburgerImageSelectedTrueElement.alt = "hamTrue";
-    site.domElement.menuMobileContainer.hamburgerElement.hamburgerImageSelectedTrueElement.id = "site_domElement_menuMobileContainer_hamburgerElement_hamburgerImageSelectedTrueElement";
+    var temp = document.createElement("img");
+    temp.style.display = "flex";
+    temp.style.justifyContent = "center";
+    temp.style.alignItems = "center";
+    temp.src = "https://bsharpsoftware.github.io/image/hamburgerMenu_1.svg";
+    temp.alt = "hamTrue";
+    temp.id = "site_domElement_menuMobileContainer_hamburgerElement_hamburgerImageSelectedTrueElement";
+    return temp;
 }
 
 function bsharp_site_domElement_menuMobileContainer_hamburgerElement_hamburgerImageSelectedFalseElementCreate() {
-    site.domElement.menuMobileContainer.hamburgerElement.hamburgerImageSelectedFalseElement = document.createElement("img");
-    site.domElement.menuMobileContainer.hamburgerElement.hamburgerImageSelectedFalseElement.style.display = "flex";
-    site.domElement.menuMobileContainer.hamburgerElement.hamburgerImageSelectedFalseElement.style.justifyContent = "center";
-    site.domElement.menuMobileContainer.hamburgerElement.hamburgerImageSelectedFalseElement.style.alignItems = "center";
-    site.domElement.menuMobileContainer.hamburgerElement.hamburgerImageSelectedFalseElement.src = "https://bsharpsoftware.github.io/image/hamburgerMenu_0.svg";
-    site.domElement.menuMobileContainer.hamburgerElement.hamburgerImageSelectedFalseElement.alt = "hamFalse";
-    site.domElement.menuMobileContainer.hamburgerElement.hamburgerImageSelectedFalseElement.id = "site_domElement_menuMobileContainer_hamburgerElement_hamburgerImageSelectedFalseElement";
+    var temp = document.createElement("img");
+    temp.style.display = "flex";
+    temp.style.justifyContent = "center";
+    temp.style.alignItems = "center";
+    temp.src = "https://bsharpsoftware.github.io/image/hamburgerMenu_0.svg";
+    temp.alt = "hamFalse";
+    temp.id = "site_domElement_menuMobileContainer_hamburgerElement_hamburgerImageSelectedFalseElement";
+    return temp;
 }
 
 function bsharp_site_domElement_menuMonileContainer_mainElementCreate() {
@@ -176,14 +185,15 @@ function bsharp_site_domElement_menuMonileContainer_mainElementCreate() {
 }
 
 function bsharp_site_domElement_menuMobileContainer_mainElement_elementCreate() {
-    site.domElement.menuMobileContainer.mainElement.element = document.createElement("div");
-    site.domElement.menuMobileContainer.mainElement.element.style.position = "fixed";
-    site.domElement.menuMobileContainer.mainElement.element.style.background = "#000000";
-    site.domElement.menuMobileContainer.mainElement.element.style.width = "100%";
-    site.domElement.menuMobileContainer.mainElement.element.style.minHeight = "min-content";
-    site.domElement.menuMobileContainer.mainElement.element.style.fontSize = "0px";
-    site.domElement.menuMobileContainer.mainElement.element.style.boxSizing = "border-box";
-    site.domElement.menuMobileContainer.mainElement.element.id = "site_domElement_menuMobileContainer_mainElement_element";
+    var temp = document.createElement("div");
+    temp.style.position = "fixed";
+    temp.style.background = "#000000";
+    temp.style.width = "100%";
+    temp.style.minHeight = "min-content";
+    temp.style.fontSize = "0px";
+    temp.style.boxSizing = "border-box";
+    temp.id = "site_domElement_menuMobileContainer_mainElement_element";
+    return temp;
 }
 
 function bsharp_site_domElement_menuMobileContainer_mainElement_mainElementCreate() {
@@ -193,16 +203,17 @@ function bsharp_site_domElement_menuMobileContainer_mainElement_mainElementCreat
 }
 
 function bsharp_site_domElement_menuMobileContainer_mainElement_mainElement_elementCreate() {
-    site.domElement.menuMobileContainer.mainElement.mainElement.element = document.createElement("div");
-    site.domElement.menuMobileContainer.mainElement.mainElement.element.style.position = "flex";
-    site.domElement.menuMobileContainer.mainElement.mainElement.element.style.justifyContent = "center";
-    site.domElement.menuMobileContainer.mainElement.mainElement.element.style.alignItems = "center";
-    site.domElement.menuMobileContainer.mainElement.mainElement.element.style.width = "100%";
-    site.domElement.menuMobileContainer.mainElement.mainElement.element.style.height = "auto";
-    site.domElement.menuMobileContainer.mainElement.mainElement.element.innerHTML = "Main";
-    site.domElement.menuMobileContainer.mainElement.mainElement.element.style.color = rgba(255, 255, 255, 1.0);
-    site.domElement.menuMobileContainer.mainElement.mainElement.element.style.overflowWrap = "break-word";
-    site.domElement.menuMobileContainer.mainElement.mainElement.element.id = "site_domElement_menuMobileContainer_mainElement_mainElement_element";
+    var temp = document.createElement("div");
+    temp.style.position = "flex";
+    temp.style.justifyContent = "center";
+    temp.style.alignItems = "center";
+    temp.style.width = "100%";
+    temp.style.height = "auto";
+    temp.innerHTML = "Main";
+    temp.style.color = "rgba(255, 255, 255, 1.0)";
+    temp.style.overflowWrap = "break-word";
+    temp.id = "site_domElement_menuMobileContainer_mainElement_mainElement_element";
+    return temp;
 }
 
 function bsharp_site_domElement_menuMobileContainer_mainElement_messagesElementCreate() {
@@ -212,16 +223,17 @@ function bsharp_site_domElement_menuMobileContainer_mainElement_messagesElementC
 }
 
 function bsharp_site_domElement_menuMobileContainer_mainElement_messagesElement_elementCreate() {
-    site.domElement.menuMobileContainer.mainElement.messagesElement.element = document.createElement("div");
-    site.domElement.menuMobileContainer.mainElement.messagesElement.element.style.position = "flex";
-    site.domElement.menuMobileContainer.mainElement.messagesElement.element.style.justifyContent = "center";
-    site.domElement.menuMobileContainer.mainElement.messagesElement.element.style.alignItems = "center";
-    site.domElement.menuMobileContainer.mainElement.messagesElement.element.style.width = "100%";
-    site.domElement.menuMobileContainer.mainElement.messagesElement.element.style.height = "auto";
-    site.domElement.menuMobileContainer.mainElement.messagesElement.element.innerHTML = "Messages";
-    site.domElement.menuMobileContainer.mainElement.messagesElement.element.style.color = rgba(255, 255, 255, 1.0);
-    site.domElement.menuMobileContainer.mainElement.messagesElement.element.style.overflowWrap = "break-word";
-    site.domElement.menuMobileContainer.mainElement.messagesElement.element.id = "site_domElement_menuMobileContainer_mainElement_messagesElement_element";
+    var temp = document.createElement("div");
+    temp.style.position = "flex";
+    temp.style.justifyContent = "center";
+    temp.style.alignItems = "center";
+    temp.style.width = "100%";
+    temp.style.height = "auto";
+    temp.innerHTML = "Messages";
+    temp.style.color = "rgba(255, 255, 255, 1.0)";
+    temp.style.overflowWrap = "break-word";
+    temp.id = "site_domElement_menuMobileContainer_mainElement_messagesElement_element";
+    return temp;
 }
 
 function bsharp_site_domElement_menuMobileContainer_mainElement_aboutElementCreate() {
@@ -231,16 +243,17 @@ function bsharp_site_domElement_menuMobileContainer_mainElement_aboutElementCrea
 }
 
 function bsharp_site_domElement_menuMobileContainer_mainElement_aboutElement_elementCreate() {
-    site.domElement.menuMobileContainer.mainElement.aboutElement.element = document.createElement("div");
-    site.domElement.menuMobileContainer.mainElement.aboutElement.element.style.position = "flex";
-    site.domElement.menuMobileContainer.mainElement.aboutElement.element.style.justifyContent = "center";
-    site.domElement.menuMobileContainer.mainElement.aboutElement.element.style.alignItems = "center";
-    site.domElement.menuMobileContainer.mainElement.aboutElement.element.style.width = "100%";
-    site.domElement.menuMobileContainer.mainElement.aboutElement.element.style.height = "auto";
-    site.domElement.menuMobileContainer.mainElement.aboutElement.element.innerHTML = "About";
-    site.domElement.menuMobileContainer.mainElement.aboutElement.element.style.color = rgba(255, 255, 255, 1.0);
-    site.domElement.menuMobileContainer.mainElement.aboutElement.element.style.overflowWrap = "break-word";
-    site.domElement.menuMobileContainer.mainElement.aboutElement.element.id = "site_domElement_menuMobileContainer_mainElement_aboutElement_element";
+    var temp = document.createElement("div");
+    temp.style.position = "flex";
+    temp.style.justifyContent = "center";
+    temp.style.alignItems = "center";
+    temp.style.width = "100%";
+    temp.style.height = "auto";
+    temp.innerHTML = "About";
+    temp.style.color = "rgba(255, 255, 255, 1.0)";
+    temp.style.overflowWrap = "break-word";
+    temp.id = "site_domElement_menuMobileContainer_mainElement_aboutElement_element";
+    return temp;
 }
 
 function bsharp_site_domElement_pageElementCreate() {
@@ -250,11 +263,12 @@ function bsharp_site_domElement_pageElementCreate() {
 }
 
 function bsharp_site_domElement_pageElement_elementCreate() {
-    site.domElement.pageElement.element = document.createElement("div");
-    site.domElement.pageElement.element.style.position = "static";
-    site.domElement.pageElement.element.style.width = "100%";
-    site.domElement.pageElement.element.style.overflowY = "auto";
-    site.domElement.pageElement.element.id = "site_domElement_pageElement_element";
+    var temp = document.createElement("div");
+    temp.style.position = "static";
+    temp.style.width = "100%";
+    temp.style.overflowY = "auto";
+    temp.id = "site_domElement_pageElement_element";
+    return temp;
 }
 
 function bsharp_adjust() {
@@ -301,10 +315,10 @@ function bsharp_attach() {
     document.body.appendChild(site.domElement.menuDesktopElement.element);
     document.body.appendChild(site.domElement.menuMobileContainer.hamburgerElement.element);
     document.body.appendChild(site.domElement.menuMobileContainer.mainElement.element);
-    document.body.appendChil(site.domElement.pageElement.element);
+    document.body.appendChild(site.domElement.pageElement.element);
 }
 
-function bhsarp_create() {
+function bsharp_create() {
     site = bsharp_siteCreate();
     bsharp_adjust();
     bsharp_attach();
